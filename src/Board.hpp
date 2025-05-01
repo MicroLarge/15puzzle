@@ -21,6 +21,9 @@ class Board
 {
 private:
 	short int m_board[4][4]{};
+
+	unsigned long long m_moves{};
+
 	std::pair<int, int> m_position{};
 
 	bool inBounds(int i, int j);
