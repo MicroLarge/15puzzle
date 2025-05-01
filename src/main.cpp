@@ -5,7 +5,7 @@
 int main()
 {
 	std::cout << "Welcome to 15 Puzzle!\n";
-	std::cout << "Use the arrow keys to move. Press \'q\' to quit at any time.\n";
+	std::cout << "Use the arrow keys to move. Press \'Q\' to quit at any time.\n";
 	std::cout << "Press Enter to start.";
 
 	while (_getch() != Key::ENTER)
