@@ -54,7 +54,7 @@ void Board::print()
 
 bool Board::quitMenu() //Returns true if the player chose "yes", false otherwise.
 {
-	system("cls");
+	std::cout << "\nCurrent moves: " << m_moves << "\n";
 	std::cout << "Are you sure you want to quit playing? You will lose your progress.\n";
 	std::cout << "Yes (Y) or No (N): ";
 	int input{};
@@ -126,10 +126,15 @@ bool Board::play()
 		case Key::RIGHT: move(m_position.first, m_position.second - 1); break; //Swaps with the unit to the left
 	}
 
+	++m_moves;
+
 	if (hasWon())
 	{
 		print();
-		std::cout << "\n\nYou Won!";
+		std::cout << "\n\n\nYou Won!\n";
+		std::cout << "Moves: " << m_moves << "\n\n";
+		std::cout << "Press any key to exit.\n";
+		_getch();
 		return false;
 	}
 	
