@@ -8,7 +8,11 @@
 Board::Board()
 {
 	std::vector<short int> numberQueue{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-	std::shuffle(numberQueue.begin(), numberQueue.end(), Random::mt);
+
+	do
+		std::shuffle(numberQueue.begin(), numberQueue.end(), Random::mt);
+	while(checkSolvable(numberQueue) == false);
+
 	for (int i{ 0 }; i < 4; ++i)
 	{
 		for (int j{ 0 }; j < 4; ++j)
