@@ -1,5 +1,6 @@
 #pragma once
 #include <utility>
+#include <vector>
 #include "Random.hpp"
 
 namespace Key
@@ -34,10 +35,12 @@ private:
 	bool hasWon();
 
 	Board(bool solved);
-	friend int main();
+	//friend int main();
 	friend bool operator==(const Board& b1, const Board& b2);
 public:
 	Board();
 	bool play();
 };
 
+// Added check to see if the puzzle is solvable
+bool checkSolvable(std::vector<short int> &sequence);
