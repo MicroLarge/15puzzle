@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.10.0)
-project(15_Puzzle VERSION 1.1)
+project(15_Puzzle VERSION 1.2)
 
 include(CTest)
 enable_testing()
 
-add_executable(15_Puzzle src/main.cpp src/Board.cpp)
+add_executable(15_Puzzle src/main.cpp src/Board.cpp src/checkSolvable.cpp)
 target_link_libraries(15_Puzzle -static -static-libgcc -static-libstdc++)
 
 
